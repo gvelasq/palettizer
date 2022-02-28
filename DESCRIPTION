@@ -1,10 +1,15 @@
 Package: palettizer
-Title: R Package for Color Palette Generation Using the 'palettize' C++ Library 
+Title: R Package for Color Palette Generation Using the 'palettize' C++
+    Library
 Version: 0.0.0.9000
 Authors@R: 
     person("Gustavo", "Velásquez", , "gvelasq2github@gmail.com", role = c("aut", "cre"))
-Description: R package for color palette generation using the 'palettize' C++ library.
+Description: R package for color palette generation using the 'palettize'
+    C++ library.
 License: MIT + file LICENSE
+LinkingTo: 
+    cpp11
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.1.2
+SystemRequirements: C++11
