@@ -7,6 +7,8 @@ Authors@R:
 Description: R package for color palette generation using the 'palettize'
     C++ library.
 License: MIT + file LICENSE
+URL: https://gvelasq.github.io/palettizer,
+    https://github.com/gvelasq/palettizer
 LinkingTo: 
     cpp11
 Encoding: UTF-8
