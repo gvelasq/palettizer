@@ -8,6 +8,14 @@
 \description{
 R package for color palette generation using the 'palettize' C++ library.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://gvelasq.github.io/palettizer}
+  \item \url{https://github.com/gvelasq/palettizer}
+}
+
+}
 \author{
 \strong{Maintainer}: Gustavo Velásquez \email{gvelasq2github@gmail.com}
 
