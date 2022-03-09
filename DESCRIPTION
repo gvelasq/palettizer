@@ -12,6 +12,8 @@ Description: R package for color palette generation using the 'palettize'
 License: MIT + file LICENSE
 URL: https://gvelasq.github.io/palettizer,
     https://github.com/gvelasq/palettizer
+Suggests: 
+    covr
 LinkingTo: 
     cpp11
 Encoding: UTF-8
