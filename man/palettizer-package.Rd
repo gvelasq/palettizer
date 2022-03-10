@@ -19,5 +19,11 @@ Useful links:
 \author{
 \strong{Maintainer}: Gustavo Velásquez \email{gvelasq2github@gmail.com}
 
+Authors:
+\itemize{
+  \item Isabella Velásquez \email{ivelasq@gmail.com}
+  \item gvlsq
+}
+
 }
 \keyword{internal}
