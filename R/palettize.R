@@ -14,5 +14,5 @@
 #' @rdname palettize
 #' @export
 palettize <- function(path) {
-
+  NULL
 }
