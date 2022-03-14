@@ -30,3 +30,7 @@ You can install the development version of palettizer from [GitHub](https://gith
 # install.packages("devtools")
 devtools::install_github("gvelasq/palettizer")
 ```
+
+## Code of Conduct
+
+Please note that the palettizer project is released with a [Contributor Code of Conduct](https://gvelasq.github.io/palettizer/CODE_OF_CONDUCT.html). By contributing to this project, you agree to abide by its terms.
