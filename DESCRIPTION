@@ -12,6 +12,7 @@ Description: R package for color palette generation using the 'palettize'
 License: MIT + file LICENSE
 URL: https://gvelasq.github.io/palettizer,
     https://github.com/gvelasq/palettizer
+BugReports: https://github.com/gvelasq/palettizer/issues
 Suggests: 
     covr,
     testthat (>= 3.0.0)
