@@ -2,7 +2,7 @@ pandoc: 2.7.3
 pkgdown: 2.0.2
 pkgdown_sha: ~
 articles: {}
-last_built: 2022-03-17T18:03Z
+last_built: 2022-03-18T15:42Z
 urls:
   reference: https://gvelasq.github.io/palettizer/reference
   article: https://gvelasq.github.io/palettizer/articles
