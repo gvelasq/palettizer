@@ -8,6 +8,8 @@
 [![R-CMD-check](https://github.com/gvelasq/palettizer/workflows/R-CMD-check/badge.svg)](https://github.com/gvelasq/palettizer/actions)
 [![Codecov test
 coverage](https://codecov.io/gh/gvelasq/palettizer/branch/main/graph/badge.svg)](https://app.codecov.io/gh/gvelasq/palettizer?branch=main)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/palettizer)](https://CRAN.R-project.org/package=palettizer)
 [![Lifecycle:
 experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://lifecycle.r-lib.org/articles/stages.html#experimental)
 <!-- badges: end -->
