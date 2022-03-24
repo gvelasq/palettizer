@@ -1,4 +1,4 @@
 library(testthat)
 library(palettizer)
 
-test_check("palettizer")
+test_check("plt_tize")

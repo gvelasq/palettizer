@@ -1,18 +1,18 @@
 #' Create a color palette
 #'
 #' @description
-#' `palettize()` creates a color palette from an image file.
+#' `plt_tize()` creates a color palette from a supported image file.
 #'
 #' @usage
-#' palettize(path)
+#' plt_tize(path)
 #'
 #' @param path A path to a supported image file.
 #'
 #' @return
 #' A character vector of hexadecimal colors.
 #'
-#' @rdname palettize
+#' @rdname plt_tize
 #' @export
-palettize <- function(path) {
+plt_tize <- function(source_path, cluster_count, seed, sort_type) {
   NULL
 }
