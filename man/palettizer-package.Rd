@@ -13,6 +13,7 @@ Useful links:
 \itemize{
   \item \url{https://gvelasq.github.io/palettizer}
   \item \url{https://github.com/gvelasq/palettizer}
+  \item Report bugs at \url{https://github.com/gvelasq/palettizer/issues}
 }
 
 }
