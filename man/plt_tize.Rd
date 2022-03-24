@@ -4,9 +4,13 @@
 \alias{plt_tize}
 \title{Create a color palette}
 \usage{
-plt_tize(path)
+plt_tize(path, cluster_count, seed, sort_type)
 }
 \arguments{
+\item{cluster_count}{The number of clusters for k-means clustering.}
+
+\item{seed}{An integer to specify the seed for the random number generator.}
+
 \item{path}{A path to a supported image file.}
 }
 \value{
