@@ -5,18 +5,17 @@
 #include "cpp11/declarations.hpp"
 #include <R_ext/Visibility.h>
 
-// code.cpp
-void fun();
-extern "C" SEXP _palettizer_fun() {
+// plt_check.cpp
+bool plt_check_(std::string path);
+extern "C" SEXP _palettizer_plt_check_(SEXP path) {
   BEGIN_CPP11
-    fun();
-    return R_NilValue;
+    return cpp11::as_sexp(plt_check_(cpp11::as_cpp<cpp11::decay_t<std::string>>(path)));
   END_CPP11
 }
 
 extern "C" {
 static const R_CallMethodDef CallEntries[] = {
-    {"_palettizer_fun", (DL_FUNC) &_palettizer_fun, 0},
+    {"_palettizer_plt_check_", (DL_FUNC) &_palettizer_plt_check_, 1},
     {NULL, NULL, 0}
 };
 }
