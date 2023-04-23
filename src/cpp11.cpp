@@ -12,10 +12,18 @@ extern "C" SEXP _palettizer_plt_check_(SEXP path) {
     return cpp11::as_sexp(plt_check_(cpp11::as_cpp<cpp11::decay_t<std::string>>(path)));
   END_CPP11
 }
+// plt_tize.cpp
+cpp11::writable::strings plt_tize_(const std::string& source_path, int cluster_count_init, int seed, const std::string& sort_type);
+extern "C" SEXP _palettizer_plt_tize_(SEXP source_path, SEXP cluster_count_init, SEXP seed, SEXP sort_type) {
+  BEGIN_CPP11
+    return cpp11::as_sexp(plt_tize_(cpp11::as_cpp<cpp11::decay_t<const std::string&>>(source_path), cpp11::as_cpp<cpp11::decay_t<int>>(cluster_count_init), cpp11::as_cpp<cpp11::decay_t<int>>(seed), cpp11::as_cpp<cpp11::decay_t<const std::string&>>(sort_type)));
+  END_CPP11
+}
 
 extern "C" {
 static const R_CallMethodDef CallEntries[] = {
     {"_palettizer_plt_check_", (DL_FUNC) &_palettizer_plt_check_, 1},
+    {"_palettizer_plt_tize_",  (DL_FUNC) &_palettizer_plt_tize_,  4},
     {NULL, NULL, 0}
 };
 }

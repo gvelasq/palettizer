@@ -17,6 +17,8 @@
 #'
 #' @rdname plt_tize
 #' @export
-plt_tize <- function(path, cluster_count, seed, sort_type = "weight") {
-  NULL
+plt_tize <- function(path, cluster_count = 5, seed = 42 , sort_type = "weight") {
+  path <- normalizePath(path)
+  stopifnot("The seed argument must be an integer or a number coercible to an integer" = is_integerish(seed))
+  plt_tize_(path, cluster_count, seed, sort_type)
 }

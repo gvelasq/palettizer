@@ -3,3 +3,7 @@
 plt_check_ <- function(path) {
   .Call(`_palettizer_plt_check_`, path)
 }
+
+plt_tize_ <- function(source_path, cluster_count_init, seed, sort_type) {
+  .Call(`_palettizer_plt_tize_`, source_path, cluster_count_init, seed, sort_type)
+}
