@@ -193,7 +193,7 @@ std::string color_to_hex(u32 color) {
 }
 
 [[cpp11::register]]
-cpp11::writable::strings plt_tize_(const std::string &source_path, int cluster_count_init, int seed, const std::string &sort_type) {
+cpp11::writable::strings plt_tize_(const std::string& source_path, int cluster_count_init, int seed, const std::string& sort_type) {
     Palettize_Config config = {};
     config.source_path = (char *)source_path.c_str();
     config.cluster_count = cluster_count_init;
