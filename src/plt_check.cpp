@@ -1,8 +1,8 @@
 #include <cpp11.hpp>
-using namespace cpp11;
 
-#define STB_IMAGE_IMPLEMENTATION
 #include "stb_image/stb_image.h"
+
+using namespace cpp11;
 
 [[cpp11::register]]
 bool plt_check_(std::string path) {
