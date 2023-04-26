@@ -8,3 +8,5 @@
 ^\.github$
 ^codecov\.yml$
 .vscode/
+^doc$
+^Meta$
