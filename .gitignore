@@ -45,3 +45,6 @@ docs
 
 # VS Code files
 .vscode/
+inst/doc
+/doc/
+/Meta/

@@ -1,0 +1,80 @@
+---
+title: "palettizer: Color palette generation from images"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{generate-color-palette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/",
+  out.width = "100%"
+)
+```
+
+This vignette demonstrates how to use the {palettizer} package to generate a color palette from an image and apply it to a {ggplot2} plot using the palmerpenguins dataset.
+
+First, load the required libraries:
+
+```{r load-libraries}
+library(palettizer)
+library(palmerpenguins)
+library(ggplot2)
+```
+
+## Generate color palette
+
+The {palettizer} package generates a color palette from an image using K-means clustering. The algorithm works as follows:
+
+1. The image is first resized to a smaller version for faster processing.
+2. The colors of the image are then represented in the LAB color space, which is more perceptually uniform compared to RGB.
+3. K-means clustering is performed on the colors in the LAB color space. The number of clusters (K) corresponds to the desired number of colors in the palette, which can be specified using the `cluster_count` parameter.
+4. The centroids of the K clusters are calculated, representing the dominant colors in the image.
+5. The dominant colors are converted back to the RGB color space and returned as a vector of hexadecimal color codes.
+
+To generate a color palette from an image using the `plt_tize()` function, provide the image file path and the desired number of colors (clusters):
+
+```{r generate-palette}
+plt_vector <-
+  palettizer::plt_tize("lter_penguins.png", cluster_count = 3)
+```
+
+## Create a {ggplot2} plot with the generated color palette
+
+Finally, we will create a {ggplot2} plot using the palmerpenguins dataset and apply the generated color palette:
+
+```{r create-plot}
+flipper_bill <-
+  ggplot(data = penguins,
+         aes(x = flipper_length_mm,
+             y = bill_length_mm)) +
+  geom_point(aes(color = species,
+                 shape = species),
+             size = 3,
+             alpha = 0.8) +
+  geom_smooth(method = "lm", se = FALSE, aes(color = species)) +
+  theme_minimal() +
+  scale_color_manual(values = plt_vector) +
+  labs(
+    title = "Flipper and bill length",
+    subtitle = "Dimensions for Adelie, Chinstrap and Gentoo Penguins at Palmer Station LTER",
+    x = "Flipper length (mm)",
+    y = "Bill length (mm)",
+    color = "Penguin species",
+    shape = "Penguin species"
+  ) +
+  theme(
+    legend.position = c(0.85, 0.15),
+    plot.title.position = "plot",
+    plot.caption = element_text(hjust = 0, face = "italic"),
+    plot.caption.position = "plot"
+  )
+
+flipper_bill
+```
+
+This creates a {ggplot2} plot with the color palette generated from the image applied to the data points.
